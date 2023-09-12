@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - MyPortfolio</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/MyPortfolio.styles.css" asp-append-version="true" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="#" class="logo">S.Zr</a>
+            
+            <nav class="navbar">
+                <a class="active" href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <section class="home">
+            <div class="home-image">
+                <img src="image.jpeg" alt="">
+            </div>
+
+            <dvi class="home-content">
+                <h1 id="typing-text"></h1>
+                <h3>A Back-End Developer</h3>
+                <p class="p1">A Programmer is a machine that turns coffee into code. &#9749; &#129302;</p>
+                <p class="p2">It's not a bug; it's an undocumented feature. &#128520; &#128030;</p>
+
+                <a href="#" class="btn">Download CV</a>
+            </dvi>
+        </section>
+
+    </body>
+
+</html>
+
+<script>
+const text = "Hi, I'm Sina Zare";
+const typingSpeed = 100; // Adjust the typing speed (in milliseconds) as needed
+
+function typeWriter(element, text, i, speed) {
+    if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(function() {
+            typeWriter(element, text, i, speed);
+        }, speed);
+    }
+}
+
+const typingElement = document.getElementById('typing-text');
+typeWriter(typingElement, text, 0, typingSpeed);
+</script>
