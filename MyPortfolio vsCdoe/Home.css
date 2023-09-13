@@ -14,17 +14,61 @@
 }
 
 body.back {
-    --bg-black-900: #bdc45f;
+    --bg-black-900: #e2bc8bc9;
     --bg-black-100: #222222;
     --bg-black-50: #393939;
     --text-black-900: #ffffff;
     --text-black-700: #e9e9e9
 }
 
+body {
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
 .btn {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
+    margin-top: 70px;
     color: white;
     border-radius: 40px;
     display: inline-block;
@@ -43,4 +87,219 @@ body.back {
 
 .btn:hover {
     transform: scale(1.05);
+}
+
+.main-content {
+    padding-left: 0px;
+}
+
+
+/* section */
+.section {
+    padding: 0 30px;
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    opacity: 1;
+}
+
+.section .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title h2::before {
+
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+}
+
+.section-title h2::after {
+
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+
+}
+
+.shadow-dark {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+
+/* home */
+.home {
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+.home .home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.home .home-info p {
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: var(--text-black-700);
+}
+
+h3.hello {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+h3.hello span {
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+h3.my-profession {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.typing {
+    color: var(--skin-color);
+}
+
+.home .home-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+    text-align: center;
+}
+
+.home .home-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: 20px;
+    bottom: -40px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+
+}
+
+.home-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 20px;
+    top: -40px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+
+}
+
+.home .home-img img {
+    height: 400px;
+    width: 280px;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+    border-radius: 5px;
+}
+
+
+/* media */
+@media (max-width:1199px) {
+    .aside {
+        left: -270px;
+    }
+
+    .main-content {
+        padding-left: 0;
+    }
+
+    .about .about-content .personal-info .item-info p span {
+        display: block;
+    }
+
+}
+
+@media (max-width:991px) {
+
+    .service .service-item,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+
+    .about .about-content .education,
+    .about .about-content .expriance,
+    .home .home-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home .home-img {
+        margin: 80px auto 0;
+        flex: 0 0 60%;
+        max-width: 100%;
+
+    }
+
+}
+
+@media (max-width:767px) {
+    .home .home-img {
+        margin-top: 100px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .contact .contact-info-item,
+    .contact .contact-form .col-6,
+    .service .service-item,
+    .portfolio .portfolio-item,
+    .about .about-content .education,
+    .about .about-content .expriance,
+    .about .about-content .skills,
+    .about .about-content .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Add space between h3 and the first <p> */
+.hello {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+/* Reduce space between the first <p> and the second <p> */
+.p1 {
+    margin-top: 50px;
+    margin-bottom: 10px; /* Adjust this value as needed */
 }
