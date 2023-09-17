@@ -4,27 +4,34 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>@ViewData["Title"] - MyPortfolio</title>
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/MyPortfolio.styles.css" asp-append-version="true" />
         <link rel="stylesheet" href="Home.css">
+        <link rel="stylesheet" href="Header.css">
+        <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
     </head>
 
     <body class="back">
-        <header class="header">            
-            <nav class="navbar">
-                <a class="active" href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
+        <header class="header">           
+            <a class="logo">Sina</a>
+    
+            <!-- Add a menu button for small screens -->
+            <div class="menu-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+    
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+                <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Contact.html">Contact</a>
             </nav>
         </header>
 
         <div class="main-container">
         
             <!-- main -->
-            <div class="main-content">
+            <div class="main-content"  style="margin-top: 20px;">
               <!--start Home -->
               <section class="home section" id="home">
                 <div class="container">
@@ -94,5 +101,6 @@
   
   const typingElement = document.getElementById('typing-text');
   typeWriter(typingElement, text, 0, typingSpeed);
-  </script>
+</script>
   
+<script src="ResponsiveHeader.js"></script>

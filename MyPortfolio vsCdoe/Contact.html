@@ -11,19 +11,37 @@
   
     <!-- css file -->
     <link rel="stylesheet" href="Projects.css">
-    <link rel="stylesheet" href="color-1.css">
+    <!-- <link rel="stylesheet" href="color-1.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="Header.css">
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
   </head>
   
   <body class="dark">
+    <header class="header">           
+      <a class="logo">Sina</a>
+
+      <!-- Add a menu button for small screens -->
+      <div class="menu-button">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+          <a href="Home.html">Home</a>
+          <a href="About.html">About</a>
+          <a href="Projects.html">Projects</a>
+          <a href="Contact.html">Contact</a>
+      </nav>
+  </header>
 
     <!-- container -->
     <div class="main-container">
   
       <!--start main -->
-      <div class="main-content">
+      <div class="main-content"  style="margin-top: 20px;">
 
         <!-- start contact -->
         <section class="section contact" id="contact">
@@ -33,7 +51,7 @@
                   <h2>Contact Me</h2>
                 </div>
               </div>
-              <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
+              <h3 class="contact-title padd-15">Do You Have Any Questions ?</h3>
               <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
               <br>
               <div class="row padd-15 home-sci">
@@ -159,4 +177,6 @@
     <script src="js/style-switcher.js"></script>
   
   
-</body></html>      
+</body></html>
+
+<script src="ResponsiveHeader.js"></script>

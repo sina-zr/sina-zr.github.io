@@ -1,0 +1,87 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #d4a465;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #633a05;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:  35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #393939;
+    font-weight: 800;
+}
+
+.logo {
+    font-size: 18px;
+    color: #633a05;
+    font-weight: 900;
+    font-family: 'Common Pixel', sans-serif;                                                
+    font-smooth: never;
+    -webkit-font-smoothing : none;  
+}
+
+
+/* Add styles for the menu button */
+.menu-button {
+    display: none; /* Hide the menu button by default */
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #633a05;
+    margin: 3px 0;
+}
+
+/* Use a media query to change the layout for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide the navbar by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #d4a465;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Show the menu button and toggle the navbar when clicked */
+    .menu-button {
+        display: flex;
+    }
+
+    /* Show the menu items in the collapsed navbar */
+    .navbar.active {
+        display: flex;
+    }
+
+    /* Add additional styles for the collapsed navbar links */
+    .navbar.active a {
+        margin: 10px 0;
+    }
+}
+
+.menu-expanded {
+    margin-top: 205px;
+}
