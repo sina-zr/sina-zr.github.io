@@ -304,3 +304,11 @@ h3.my-profession {
     margin-top: 50px;
     margin-bottom: 10px; /* Adjust this value as needed */
 }
+
+/* Hide ::before and ::after pseudo-elements on mobile screens */
+@media (max-width: 767px) {
+    .home .home-img::before,
+    .home .home-img::after {
+        display: none;
+    }
+}
