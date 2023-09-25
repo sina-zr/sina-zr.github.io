@@ -1,112 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="Home.css">
-        <link rel="stylesheet" href="Header.css">
-        <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
 
-        <title>Home</title>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Assets/Styles/Home.css">
+    <link rel="stylesheet" href="Assets/Styles/Header.css">
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
 
-        <!-- icon -->
-        <link rel="icon" href="Assets/Images/data.png" type="image/icon">
+    <title>Home</title>
 
-    </head>
+    <!-- icon -->
+    <link rel="icon" href="Assets/Images/data.png" type="image/icon">
 
-    <body class="back">
-        <header class="header">           
-            <a class="logo">Sina</a>
-    
-            <!-- Add a menu button for small screens -->
-            <div class="menu-button">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-    
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
-                <a href="index.html">Home</a>
-                <a href="About.html">About</a>
-                <a href="Projects.html">Projects</a>
-                <a href="Contact.html">Contact</a>
-            </nav>
-        </header>
+</head>
 
-        <div class="main-container">
-        
-            <!-- main -->
-            <div class="main-content"  style="margin-top: 20px;">
-              <!--start Home -->
-              <section class="home section" id="home">
+<body class="back">
+    <header class="header">
+        <a class="logo">Sina</a>
+
+        <!-- Add a menu button for small screens -->
+        <div class="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <!-- main -->
+        <div class="main-content" style="margin-top: 20px;">
+            <!--start Home -->
+            <section class="home section" id="home">
                 <div class="container">
-                  <div class="row">
-                    <div class="home-info padd-15">
-                      <h1 style="color: #d65e27;">Hi I'm <span id="typing-text" style="font-family: 'Clicker Script', cursive; font-size: 46px;"></span></h1>
-                      <h3 class="hello" style="color: #d65e27;">A Back-End Developer</h3>
-                      <p class="p1" style="color: #c7914bfd;">A Programmer is a machine that turns coffee into code. &#9749; &#129302;</p>
-                      <p style="color: #c7914bfd;">It's not a bug; it's an undocumented feature. &#128520; &#128030;</p>
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h1 style="color: #d65e27;">Hi I'm <span id="typing-text"
+                                    style="font-family: 'Clicker Script', cursive; font-size: 46px;"></span></h1>
+                            <h3 class="hello" style="color: #d65e27;">A Back-End Developer</h3>
+                            <p class="p1" style="color: #c7914bfd;">A Programmer is a machine that turns coffee into
+                                code. &#9749; &#129302;</p>
+                            <p style="color: #c7914bfd;">It's not a bug; it's an undocumented feature. &#128520;
+                                &#128030;</p>
 
-                      <a href="#" class="btn">Download CV</a>
-                    </div>
+                            <a href="#" class="btn">Download CV</a>
+                        </div>
 
-                    <div class="home-img padd-15">
-                      <img src="Assets/Images/Profile-compressed.jpg" alt="">
+                        <div class="home-img padd-15">
+                            <img src="Assets/Images/Profile-compressed.jpg" alt="">
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </section>
-              <!--end Home -->
-        
-            </div>
-          </div>
+            </section>
+            <!--end Home -->
 
-    </body>
+        </div>
+    </div>
+
+</body>
 
 </html>
 
 
-<script>
-  const text = "Sina Zare";
-  const typingSpeed = 100; // Adjust the typing speed (in milliseconds) as needed
-  const deletionSpeed = 100; // Adjust the deletion speed (in milliseconds) as needed
-  const pauseBeforeRestart = 1000; // Adjust the pause before restarting (in milliseconds) as needed
-  
-  function typeWriter(element, text, i, speed) {
-      if (i < text.length) {
-          element.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(function() {
-              typeWriter(element, text, i, speed);
-          }, speed);
-      } else {
-          // Text is fully typed, start deleting it
-          setTimeout(function() {
-              deleteText(element, text.length - 1);
-          }, pauseBeforeRestart);
-      }
-  }
-  
-  function deleteText(element, i) {
-      if (i >= 0) {
-          const currentText = element.innerHTML;
-          element.innerHTML = currentText.slice(0, i);
-          i--;
-          setTimeout(function() {
-              deleteText(element, i);
-          }, deletionSpeed);
-      } else {
-          // Deletion complete, start typing again
-          setTimeout(function() {
-              element.innerHTML = ''; // Clear the element
-              typeWriter(element, text, 0, typingSpeed);
-          }, pauseBeforeRestart);
-      }
-  }
-  
-  const typingElement = document.getElementById('typing-text');
-  typeWriter(typingElement, text, 0, typingSpeed);
-</script>
-  
-<script src="ResponsiveHeader.js"></script>
+<script src="Assets/Scripts/SimpleType&DeleteAnimation.js"></script>
+<script src="Assets/Scripts/ResponsiveHeader.js"></script>
